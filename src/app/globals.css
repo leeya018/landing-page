@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-li {
+li,
+p {
   @apply text-right;
 }
