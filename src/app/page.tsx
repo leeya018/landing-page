@@ -1,6 +1,7 @@
 // pages/index.tsx
 
 import React from "react";
+import Image from "next/image";
 
 const Home: React.FC = () => {
   return (
@@ -35,6 +36,17 @@ const Home: React.FC = () => {
           אם אתה מזדהה עם אחד או יותר מהפחדים האלו אז המשך לקרוא ותגלה איך
           להתגבר על האמונות האלו ולבנות ביטחון אמיתי!
         </p>
+
+        {/* Image after Attention Section */}
+        <div className="mt-6">
+          <Image
+            src="/images/2.jpg" // Replace with your actual image path
+            alt="Attention Section Image"
+            width={800}
+            height={500}
+            className="rounded-lg shadow-md"
+          />
+        </div>
       </section>
 
       {/* Interest Section */}
@@ -50,10 +62,6 @@ const Home: React.FC = () => {
           אתה מסוגל ליצור עניין, להצחיק, להוביל את השיחה, ואפילו להוביל את הקשר
           למקום שאתה רוצה – בין אם זה מערכת יחסים רצינית או חוויה מינית מהנה.
         </p>
-        {/* <p className="text-xl text-gray-800 mb-4">
-          אתה לא מפחד מהדחיות, כי במקום להרגיש כישלון – אתה רואה כל דחייה
-          כהזדמנות ללמוד ולהשתפר.
-        </p> */}
         <h3 className="text-3xl font-semibold mt-6 mb-4 text-purple-600">
           תחשוב רגע מה היה קורה אם היית יכול:
         </h3>
@@ -64,7 +72,6 @@ const Home: React.FC = () => {
             להרגיש בנוח לפנות לנשים בסיטואציות שונות – בקניון, בתחנת הרכבת או
             ברחוב.
           </li>
-
           <li>
             להפוך את השיחות שלכם לעמוקות ומעניינות יותר, כך שתיצור חיבור אמיתי.
           </li>
@@ -73,6 +80,17 @@ const Home: React.FC = () => {
             או סקס.
           </li>
         </ul>
+
+        {/* Image after Interest Section */}
+        <div className="mt-6">
+          <Image
+            src="/images/1.jpg" // Replace with your actual image path
+            alt="Interest Section Image"
+            width={800}
+            height={500}
+            className="rounded-lg shadow-md"
+          />
+        </div>
       </section>
 
       {/* Desire Section */}
@@ -109,6 +127,17 @@ const Home: React.FC = () => {
             </li>
           </ul>
         </div>
+
+        {/* Image after Desire Section */}
+        <div className="mt-6">
+          <Image
+            src="/images/3.jpg" // Replace with your actual image path
+            alt="Desire Section Image"
+            width={800}
+            height={500}
+            className="rounded-lg shadow-md"
+          />
+        </div>
       </section>
 
       {/* Action Section */}
@@ -123,7 +152,6 @@ const Home: React.FC = () => {
         <ul className="text-xl text-gray-800 list-disc list-inside space-y-4">
           <li>יצירת שיחות מעניינות עם נשים.</li>
           <li>קידום אינטרקציות בצורה כנה, פתוחה ועם המון הומור.</li>
-
           <li className="text-xl">
             הובלת אינטראקציה מהרגע הראשון למקומות אינטימיים יותר – מגע, נשיקה,
             או סקס.
@@ -136,7 +164,7 @@ const Home: React.FC = () => {
           href="https://calendly.com/leeyahav018/one-on-one"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 bg-green-500 text-white px-8 py-4 rounded-lg text-2xl hover:bg-green-600 transition duration-300"
+          className="mt-8 bg-green-500 text-white px-8 py-4 rounded-lg text-2xl hover:bg-green-600 transition duration-300"
         >
           קביעת שיחה ללא עלות{" "}
         </a>
