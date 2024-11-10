@@ -53,7 +53,7 @@ const mentalDatingBookPage = () => {
           <button
             onClick={() =>
               window.open(
-                "https://meshulam.co.il/s/d57a0fa5-ff0e-80f8-92e1-a4619602677e",
+                "https://meshulam.co.il/purchase?b=0ed4279900c039f2dd0a8fd67c24e4ed",
                 "_blank"
               )
             }
