@@ -11,6 +11,7 @@ const ThnxPage = () => {
         <p className="text-gray-700 mb-4">
           אנו מעריכים את הרכישה שלך ומקווים שתיהנה מהספר האלקטרוני.
         </p>
+        <p className="text-gray-700 mb-4">חשבונית בדרך אלייך למייל</p>
         <p className="text-gray-700 mb-4">
           כדי להוריד את הספר האלקטרוני, לחץ על הקישור הבא:
         </p>
