@@ -30,8 +30,9 @@ export default function LoginPage() {
         setError(data.message);
         setSuccess("");
       }
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    } catch (err: any) {
+
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (err: unknown) {
       setError("Something went wrong.");
       setSuccess("");
     }

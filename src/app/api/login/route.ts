@@ -1,6 +1,6 @@
 // src/app/api/login/route.js
 
-export async function POST(request) {
+export async function POST(request: Request) {
   try {
     const body = await request.json();
     const { email, password } = body;
@@ -14,8 +14,9 @@ export async function POST(request) {
     }
 
     return Response.json({ message: "Login is good" }, { status: 200 });
-       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  } catch (error:any) {
+
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  } catch (error: unknown) {
     return Response.json({ message: "Something went wrong" }, { status: 500 });
   }
 }
