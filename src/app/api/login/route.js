@@ -14,7 +14,8 @@ export async function POST(request) {
     }
 
     return Response.json({ message: "Login is good" }, { status: 200 });
-  } catch (error) {
+       // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } catch (error:any) {
     return Response.json({ message: "Something went wrong" }, { status: 500 });
   }
 }

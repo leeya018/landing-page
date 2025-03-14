@@ -8,7 +8,8 @@ export default function LoginPage() {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
-  const handleSubmit = async (e) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
 
     try {
@@ -29,7 +30,8 @@ export default function LoginPage() {
         setError(data.message);
         setSuccess("");
       }
-    } catch (err) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (err: any) {
       setError("Something went wrong.");
       setSuccess("");
     }
