@@ -9,17 +9,23 @@ export default function AdminPage() {
   const [creds, setCreds] = useState<Cred[]>([]);
 
   useEffect(() => {
-    const getCreds = async () => {
-      const items = await getDocs(collection(db, "creds"));
-      const tempCreds: Cred[] = [];
-      items.forEach((doc) => {
-        tempCreds.push(doc.data() as Cred);
+    getCreds()
+      .then((data) => {
+        console.log(data.data);
+        setCreds(data.data);
+      })
+      .catch((err) => {
+        console.log(err);
       });
-      setCreds(tempCreds);
-    };
-
     getCreds();
   }, []);
+
+  const getCreds = async () => {
+    const res = await fetch("/api/admin");
+    const data = await res.json();
+
+    return data;
+  };
 
   return (
     <div className="container mx-auto p-4">
