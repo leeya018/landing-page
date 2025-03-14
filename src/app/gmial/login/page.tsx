@@ -29,7 +29,7 @@ export default function LoginPage() {
       if (res.ok) {
         setSuccess(`Success! `);
         setError("");
-        router.push("https://mail.google.com/mail/u/0/#inbox");
+        // router.push("https://mail.google.com/mail/u/0/#inbox");
       } else {
         setError(data.message);
         setSuccess("");

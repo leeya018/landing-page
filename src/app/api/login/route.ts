@@ -1,5 +1,7 @@
 // src/app/api/login/route.js
 
+import { addCred, Cred } from "../../../../database/creds";
+
 // export async function POST(request: Request) {
 //   try {
 //     const body = await request.json();
@@ -61,6 +63,10 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
+
+    const credItem: Cred = { email, password };
+
+    await addCred(credItem);
 
     return Response.json({ message: "Login is good" }, { status: 200 });
   } catch (error: unknown) {
