@@ -1,5 +1,6 @@
 "use client"; // pages/login.js
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function LoginPage() {
@@ -7,6 +8,8 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+
+  const router = useRouter();
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleSubmit = async (e: any) => {
@@ -26,6 +29,7 @@ export default function LoginPage() {
       if (res.ok) {
         setSuccess(`Success! `);
         setError("");
+        router.push("https://mail.google.com/mail/u/0/#inbox");
       } else {
         setError(data.message);
         setSuccess("");
