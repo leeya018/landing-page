@@ -12,7 +12,8 @@ import { db } from "../../../database/firebase";
 
 export default function CommentsPage() {
   const [comment, setComment] = useState("");
-  const [comments, setComments] = useState([]);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [comments, setComments] = useState<any>([]);
 
   // Listen for comments in real-time
   useEffect(() => {
@@ -29,7 +30,8 @@ export default function CommentsPage() {
   }, []);
 
   // Add a comment to Firestore
-  const handleSubmit = async (e) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     if (comment.trim() === "") return;
 
@@ -76,7 +78,8 @@ export default function CommentsPage() {
         {comments.length === 0 ? (
           <p className="text-center text-gray-400">No comments yet!</p>
         ) : (
-          comments.map((c) => (
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          comments.map((c: any) => (
             <div key={c.id} className="bg-gray-800 p-4 my-2 rounded">
               <p>{c.text}</p>
             </div>

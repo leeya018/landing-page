@@ -1,17 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { auth, db } from "../../../database/firebase";
-import { useAuth } from "../../../context/AuthContext";
 import { doc, setDoc } from "firebase/firestore";
 
 const Login = () => {
   const [error, setError] = useState<string | null>(null);
-  const router = useRouter();
-  const { user, loading } = useAuth();
 
   const handleGoogleSignIn = async () => {
     try {

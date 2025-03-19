@@ -1,15 +1,10 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { collection, getDocs } from "firebase/firestore";
 import { Cred } from "../../../../database/creds";
-import { db } from "../../../../database/firebase";
-import { AuthProvider, useAuth } from "../../../../context/AuthContext";
-import Link from "next/link";
 
 export default function AdminPage() {
   const [creds, setCreds] = useState<Cred[]>([]);
-  const { user, loading } = useAuth();
 
   useEffect(() => {
     getCreds()

@@ -37,8 +37,8 @@ export default function PageThree() {
       </p>
 
       <div className="flex flex-col gap-4 text-left">
-        {pages.map((page) => (
-          <div>
+        {pages.map((page, key) => (
+          <div key={key}>
             <div> {page.name}</div>
             <div> {page.description}</div>
             <Link

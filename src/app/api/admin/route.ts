@@ -4,7 +4,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../../../database/firebase";
 import { Cred } from "../../../../database/creds";
 
-export async function GET(request: Request) {
+export async function GET() {
   try {
     const items = await getDocs(collection(db, "creds"));
     const tempCreds: Cred[] = [];
