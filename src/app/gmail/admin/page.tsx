@@ -4,9 +4,12 @@ import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { Cred } from "../../../../database/creds";
 import { db } from "../../../../database/firebase";
+import { AuthProvider, useAuth } from "../../../../context/AuthContext";
+import Link from "next/link";
 
 export default function AdminPage() {
   const [creds, setCreds] = useState<Cred[]>([]);
+  const { user, loading } = useAuth();
 
   useEffect(() => {
     getCreds()
@@ -17,8 +20,21 @@ export default function AdminPage() {
       .catch((err) => {
         console.log(err);
       });
-    getCreds();
   }, []);
+
+  // if (loading) {
+  //   return <div>Loading...</div>;
+  // }
+
+  // if (!user) {
+  //   return (
+  //     <div>
+  //       <div>You are not authorized to view this page</div>
+  //       <div>got to login page:</div>
+  //       <Link href={"/login"}>to login</Link>
+  //     </div>
+  //   );
+  // }
 
   const getCreds = async () => {
     const res = await fetch("/api/admin");
